@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		041E6A422EF31EA500B39955 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 041E6A412EF31EA500B39955 /* FirebaseAuth */; };
+		041E6A442EF31EA500B39955 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 041E6A432EF31EA500B39955 /* FirebaseFirestore */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		041E6A162EF3178400B39955 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -52,6 +57,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				041E6A422EF31EA500B39955 /* FirebaseAuth in Frameworks */,
+				041E6A442EF31EA500B39955 /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +119,8 @@
 			);
 			name = ExpenseTracker;
 			packageProductDependencies = (
+				041E6A412EF31EA500B39955 /* FirebaseAuth */,
+				041E6A432EF31EA500B39955 /* FirebaseFirestore */,
 			);
 			productName = ExpenseTracker;
 			productReference = 041E6A082EF3178300B39955 /* ExpenseTracker.app */;
@@ -195,6 +204,9 @@
 			);
 			mainGroup = 041E69FF2EF3178300B39955;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				041E6A402EF31EA500B39955 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 041E6A092EF3178300B39955 /* Products */;
 			projectDirPath = "";
@@ -400,6 +412,7 @@
 				DEVELOPMENT_TEAM = 5ZH7UK2GU4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "We use your camera to set your profile photo.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -432,6 +445,7 @@
 				DEVELOPMENT_TEAM = 5ZH7UK2GU4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "We use your camera to set your profile photo.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -578,6 +592,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		041E6A402EF31EA500B39955 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.7.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		041E6A412EF31EA500B39955 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 041E6A402EF31EA500B39955 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		041E6A432EF31EA500B39955 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 041E6A402EF31EA500B39955 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 041E6A002EF3178300B39955 /* Project object */;
 }
